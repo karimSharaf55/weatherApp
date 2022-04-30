@@ -1,0 +1,244 @@
+<html>
+  <head>
+    <title>Weather App</title>
+    <meta charset="UTF-8" />
+    <meta name="author" content="gohad" />
+    <meta name="description" content="weather app" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="keywords" content="html,css,js,ajax,weather" />
+    <link rel="icon" href="images/icon.png" />
+    <link rel="stylesheet" href="https://use.typekit.net/oov2wcw.css">
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link  rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+  </head>
+
+  <body>
+
+    <div class="sm-bg">
+          
+    </div>
+  <!-- ----------------------------------------------------------------------- -->
+  <!--                               startheader                               -->
+  <!-- ----------------------------------------------------------------------- -->
+    <header class="header" id="to-top">
+      <div class="container">
+        
+        <nav class="navbar navbar-expand-lg py-2">
+          <a class="navbar-brand main-color" href="#">
+            <img
+              class="img-fluid"
+              src="images/logo.png"
+              width="50px"
+              height="50px"
+            />
+            Weather
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item active">
+                <a class="nav-link home" href="#"
+                  >Home <span class="sr-only">(current)</span></a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#search">Search</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#mobileApp">Mobile App</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#subscribe">Subscribe</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+
+     
+      </div>
+    </header>
+<!-- ----------------------------------------------------------------------- -->
+<!--                               end header                                -->
+<!-- ----------------------------------------------------------------------- -->
+
+<!-- ----------------------------------------------------------------------- -->
+<!--                           Start Display Temp                            -->
+<!-- ----------------------------------------------------------------------- -->
+    <section class="display-temp my-5 py-2" id="search">
+      <div class="container">
+        <div class="search m-auto">
+          <input type="text" id="search-bar" class="w-100 mb-5" placeholder="&#xF002; Search City..." style="font-family:Arial, FontAwesome"/>
+        </div>
+        <div class="city-temp d-flex">
+
+            <!-- Today-->
+            <div class="temp-card shadow">
+              <div class="day-and-date d-flex justify-content-between">
+                <p id="today"></p>
+                <p id="today-date"></p>
+              </div>
+
+              <div class="temp-datails">
+                <p id="location"></p>
+                <div class="d-flex justify-content-between my-4">
+                  <div class="pt-3">
+                    <h2 id="today-degree" class="d-inline-block"></h2><h2 class="d-inline-block"><sup>o</sup>C</h2>
+                  </div>
+                  <img id="today-icon" width="90"/>
+                </div>
+                <p id="today-description"></p>
+                <div class="details">
+                  <i class="fas fa-umbrella pr-1"></i>
+                  <span id="humidty"></span> <span>%</span>
+
+                  <i class="fas fa-wind pl-3 pr-1"></i>
+                  <span id="wind"></span> <span>km/h</span>
+
+                  <i class="far fa-compass pl-3 pr-1"></i>
+                  <span id="compass"></span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Next Days -->
+            <div class="temp-card text-center shadow">
+              <div class="day-and-date d-flex justify-content-between">
+                <p class="nextDay"></p>
+                <p class="nextDate"></p>
+              </div>
+
+              <div class="temp-datails">
+                <div>
+                  <img class="nextDay-icon" width="90"/>
+                </div>
+                <h2 class="max-degree d-inline-block"></h2><h2 class="d-inline-block"><sup>o</sup>C</h2>
+                <br>
+                <p class="min-degree d-inline-block"></p><p class="d-inline-block"><sup>o</sup>C</p>
+                <p class="nextDay-description"></p>
+              </div>
+            </div>
+
+            <div class="temp-card text-center shadow">
+              <div class="day-and-date d-flex justify-content-between">
+                <p class="nextDay"></p>
+                <p class="nextDate"></p>
+              </div>
+
+              <div class="temp-datails">
+                <div>
+                  <img class="nextDay-icon" width="90"/>
+                </div>
+                <h2 class="max-degree d-inline-block"></h2><h2 class="d-inline-block"><sup>o</sup>C</h2>
+                <br>
+                <p class="min-degree d-inline-block"></p><p class="d-inline-block"><sup>o</sup>C</p>
+                <p class="nextDay-description"></p>
+              </div>
+            </div>
+        </div>
+      </div>
+    </section>
+    <!-- ----------------------------------------------------------------------- -->
+    <!--                            End Display Temp                             -->
+    <!-- ----------------------------------------------------------------------- -->
+
+    <!-- ----------------------------------------------------------------------- -->
+    <!--                        Start Download Mobile App                        -->
+    <!-- ----------------------------------------------------------------------- -->
+    <section class="download-app py-3 my-5" id="mobileApp">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4">
+            <div class="download-img text-center">
+              <img class="w-50" src="images/download.gif">
+            </div>
+          </div>
+          <div class="col-lg-8">
+            <div class="download-info text-center mt-5">
+              <h4 class="main-color mb-4">Mobile App</h4>
+              <p class="mb-4">
+                This weather app is one of best free weather apps with full
+                features:
+                <br>
+                Local weather
+                
+                weather map (weather map service)
+                
+                and weather widgets.
+              </p>
+              <div class="download-btn mt-5">
+                <button class="btn btn-info mr-2">Download Android</button>
+                <button class="btn btn-info">Download iOS</button>
+              </div>  
+        </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ----------------------------------------------------------------------- -->
+    <!--                         End Download Mobile App                         -->
+    <!-- ----------------------------------------------------------------------- -->
+    <!-- ----------------------------------------------------------------------- -->
+    <!--                             Start Subscribe                             -->
+    <!-- ----------------------------------------------------------------------- -->
+ 
+    <section class="subscribe text-center my-5 py-5" id="subscribe">
+      <div class="container">
+            <div class="subscribe-container d-flex">
+              <div class="subscribe-info pt-5">
+                <div>
+                  <h4 class="main-color">Subscribe</h4>
+                  <p>Get daily weather updates, quotes & more..</p>
+                </div>
+                <input class="w-75" id="emailInput" type="mail" placeholder="&#xf0e0;  Enter your email to subsribe.." style="font-family:Arial, FontAwesome">
+                <div id="emailInputAlert" class="d-none text-danger my-3">
+                  Invalid Email Address!
+                </div>
+                <button class="btn btn-info d-block mx-auto my-3" id="subscribeBtn">Subscribe</button>
+              </div>
+              <div class="subscribe-img">
+                <img class="img-fluid w-75 ml-5" src="images/subscribe.gif">
+              </div>
+            </div>
+      </div>
+    </section>
+
+    <!-- Submit -->
+    <div id="submit-lighBox">
+      <div class="lighBox-content text-center shadow">
+        <div class="lighBox-img">
+          <img class="img-fluid" src="images/submit-lightbox.jpg" width="220px" height="220px">
+        </div>
+        <div class="lightBox-info">
+          <h5>Congratulations!</h5>
+          <p>You can now check your email<br>to verify your account</p>
+          <button class="btn btn-info" id="closeBtn">Close</button>
+        </div>
+      </div>
+    </div>
+ 
+
+
+
+
+    
+
+    <script src="js/jquery-3.5.1.slim.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
